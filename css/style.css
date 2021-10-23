@@ -1,0 +1,32 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo{
+    object-fit: cover;
+    width: 8%;
+    border-radius: 20%;
+}
+
+
+@media (max-width: 1024px) { 
+    .publicidad{
+        display: none;
+    }
+}
+ 
+.claseLinksFooter{
+    text-decoration: none;
+}  
+   
+.linea-footer{
+    width: 1px;
+    height: 50%;
+}
+   
+@media (max-width: 768px) { 
+    .linea-footer{
+        width: 75%;
+        height: 1px;
+    }
+}
