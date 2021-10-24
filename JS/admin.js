@@ -84,7 +84,7 @@ function crearFila(game) {
   <td>${game.descripcion}</td>
   <td>${game.url}</td>
   <td>
-    <button class="btn btn-success">Editar</button>
+    <button class="btn btn-success" onclick="prepararEdicionJuego('${game.codigo}')">Editar</button> 
     <button class="btn btn-danger">Borrar</button>
   </td>
 </tr>`;
@@ -100,3 +100,13 @@ function limpiarFormulario() {
   descripcion.className = "form-control";
   url.className = "form-control";
 }
+
+//buscar el objeto dentro del arreglo, game es cada item del arreglo
+window.prepararEdicionJuego = (cod) => {
+  //juegoEncontrado es la variable que contendra el elemento buscado
+  let juegoEncontrado = listaJuegos.find((game) => {
+    return game.codigo == cod;
+  });
+  //le pido que returne donde el codigo del objeto esta dentro del arreglo es exactamente igual al codigo que recibi por parametro
+  console.log(juegoEncontrado);
+};
