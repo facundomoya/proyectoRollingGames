@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Grupo 3" />
-    <meta name="description" content="Web Gammer" />
-    <meta name="keywords" content="gammer, blog, games, video juegos" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <title>Admin</title>
-  </head>
-  <body>
-    <header></header>
-    <main>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Grupo 3" />
+  <meta name="description" content="Web Gammer" />
+  <meta name="keywords" content="gammer, blog, games, video juegos" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="shortcut icon" href="img/logo_small_icon_only.png" type="image/x-icon">
+  <title>Admin</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient fixed-top">
+      <div class="container-fluid">
+        <div class="logo me-5 ms-3 logoresponsive"><a href="/index.html"><img src="/img/logo_large.png"
+              alt="logo-rollingamer" class="w-100"></a></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-RollinGamer"
+          aria-controls="navbar-RollinGamer" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-RollinGamer">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="sobreNosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active btn btn-outline-secondary" href="admin.html">Admin</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-1 mb-md-2">
+              <!-- agregar pagina 404 -->
+              <a class="nav-link btn btn-outline-danger" href="">Login</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link btn btn-danger" data-bs-target="#modalSuscripcion"
+                data-bs-toggle="modal"><strong>Registrarse</strong></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="container  pt-5 mt-4">
       <div class="mx-3 my-1">
         <h3 class="text-center my-1 display-3">FORMULARIO RollingGamer</h3>
         <hr />
@@ -27,65 +59,42 @@
       <form class="bg-light shadow p-3 mx-5 mt-4" id="formPersona">
         <div class="mb-3">
           <label class="form-label">Nombre</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Counter Strike 1.6"
-            id="nombre"
-            required
-          />
+          <input type="text" class="form-control" placeholder="Counter Strike 1.6" id="nombre" required />
           <div class="invalid-feedback">Este campo es obligatorio</div>
           <div class="valid-feedback">Este campo es correcto</div>
         </div>
         <div class="mb-3">
           <label class="form-label">Precio</label>
-          <input
-            type="number"
-            class="form-control"
-            placeholder="Precio en USD"
-            required
-            id="precio"
-          />
+          <input type="number" class="form-control" placeholder="Precio en USD" required id="precio" />
           <div class="invalid-feedback">Este campo es obligatorio</div>
           <div class="valid-feedback">Este campo es valido</div>
         </div>
         <div class="mb-3">
           <label class="form-label">Codigo</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="000-AAA"
-            required
-            id="codigo"
-          />
+          <input type="text" class="form-control" placeholder="000-AAA" required id="codigo" />
           <div class="invalid-feedback">
             Este campo es obligatorio, el DNI ingresado es incorrecto
           </div>
         </div>
         <div class="mb-3">
           <label class="form-label">Descripcion</label>
-          <textarea
-            type="text"
-            class="form-control"
-            id="descripcion"
-            placeholder="Descripcion breve del juego"
-            required
-          ></textarea>
+          <textarea type="text" class="form-control" id="descripcion" placeholder="Descripcion breve del juego"
+            required></textarea>
         </div>
         <div class="mb-3">
           <label class="form-label">URL</label>
           <input type="text" class="form-control" id="url" />
         </div>
-        <button type="submit" class="btn btn-warning">Guardar</button>
+        <button type="submit" class="btn btn-warning border-dark  d-grid gap-2 d-md-block">Guardar</button>
         <div class="alert alert-danger d-none my-3" role="alert" id="alerta">
           El formulario no esta completo.
         </div>
       </form>
-      <section>
+      <section class="mt-5">
         <h3 class="display-3 text-center my-1">Tabla de productos</h3>
         <hr />
-        <div class="text-center">
-          <button class="btn btn-primary mx-5 p-3" id="btnAgregar">
+        <div class="text-center d-grid gap-2 d-md-block">
+          <button class="btn btn-dark border-warning border-3 text-white mx-5 p-3" id="btnAgregar">
             Nuevo
           </button>
         </div>
@@ -109,8 +118,46 @@
           </div>
         </article>
       </section>
-    </main>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="module" src="JS/admin.js"></script>
-  </body>
+    </section>
+  </main>
+  <footer class="bg-dark bg-gradient text-light py-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-3 col-lg-3 text-center d-flex align-items-center justify-content-center">
+          <div class="d-flex flex-column text-center">
+            <h5 class="mx-0 text-danger">Otros links utiles:</h5>
+            <a class="text-danger claseLinksFooter ms-3" href="/pages/error404.html">Fan Pixel art</a>
+            <a class="text-danger claseLinksFooter ms-3" href="/pages/error404.html">Nuestro SubReddit</a>
+            <a class="text-danger claseLinksFooter ms-3" href="/pages/error404.html">Nuestro servidor de
+              discord</a>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-1 col-lg-1 d-flex align-items-center justify-content-center">
+          <div class="border border-danger linea-footer  my-3"></div>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-3 text-center">
+          <img class="my-1 rounded-circle w-25" src="img/logo_small_icon_red.png"
+            alt="Logo Rolling Games Alternativo" />
+        </div>
+        <div class="col-sm-12 col-md-1 col-lg-1 d-flex align-items-center justify-content-center">
+          <div class="border border-danger linea-footer  my-3"></div>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-3 text-center d-flex align-items-center justify-content-center">
+          <div class="">
+            <!-- ======LINKEAR A PAGINA 404===== -->
+            <h5 class="text-danger">Siguenos en nuestras redes:</h5>
+            <a class="text-danger" href="/pages/error404.html"><i class="fab fa-facebook-square fa-2x mx-2"></i></a>
+            <a class="text-danger" href="/pages/error404.html"><i class="fab fa-twitter-square fa-2x mx-2"></i></a>
+            <a class="text-danger" href="/pages/error404.html"><i class="fab fa-instagram-square fa-2x mx-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="module" src="JS/admin.js"></script>
+  <script src="https://kit.fontawesome.com/29ffcad116.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
