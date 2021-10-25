@@ -16,8 +16,7 @@ let nombre = document.querySelector("#nombre");
 let descripcion = document.querySelector("#descripcion");
 let url = document.querySelector("#url");
 let formulario = document.querySelector("#formPersona");
-let contador = 0;
-let juegoExistente = false; //false=tengo que agregar un producto nuevo pero si es true=tengo que modificar
+let juegoExistente = false;
 let btnNuevo = document.querySelector("#btnAgregar");
 
 precio.addEventListener("blur", function () {
@@ -85,7 +84,6 @@ function cargaInicial() {
 function crearFila(game) {
   let tabla = document.querySelector("#tablaJuegos");
   tabla.innerHTML += `<tr> 
-  <td>${contador}</td>
   <td>${game.nombre}</td>
   <td>${game.precio}<strong> USD</strong></td>
   <td><strong>${game.codigo}</strong></td>
@@ -96,7 +94,6 @@ function crearFila(game) {
     <button class="btn btn-danger">Borrar</button>
   </td>
 </tr>`;
-  contador++;
 }
 
 function limpiarFormulario() {
