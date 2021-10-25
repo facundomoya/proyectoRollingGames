@@ -30,3 +30,8 @@
         height: 1px;
     }
 }
+
+.disabled{
+    pointer-events: none;
+    cursor: default;
+}
