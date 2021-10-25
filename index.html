@@ -16,11 +16,10 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient fixed-top">
       <div class="container-fluid">
-        <div class="logo me-2 logoresponsive"><img src="/img/logo-rollingamer.jpeg" alt="logo-rollingamer"
-            class="w-100"></div>
-        <a class="navbar-brand" href="index.html">RollinGamer</a>
+        <div class="logo me-5 ms-3 logoresponsive"><a href="/index.html"><img src="/img/logo_large.png"
+              alt="logo-rollingamer" class="w-100"></a></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-RollinGamer"
           aria-controls="navbar-RollinGamer" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -28,75 +27,73 @@
         <div class="collapse navbar-collapse" id="navbar-RollinGamer">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/pages/sobreNosotros.html">Nosotros</a>
+              <a class="nav-link text-white" aria-current="page" href="sobreNosotros.html">Nosotros</a>
             </li>
-            <li class="nav-item mx-1">
-              <a class="nav-link btn btn-outline-danger" href="admin.html">Admin</a>
+            <li class="nav-item text-white">
+              <a class="nav-link active btn btn-outline-secondary" href="admin.html">Admin</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+  </header>
     <main>
         <main class="container my-5 py-5">
             <section>
               <h1 class="display-3 text-center">Catalogo de juegos</h1>
               <hr />
+              <article class="row" id="grillaJuegos">
+                <div class="col-sm-12 col-md-4 col-lg-3 mb-3">
+                  <div class="card">
+                    <img src="/img/fifa22.jpg" class="card-img-top" alt="imagen del juego fifa 22">
+                    <div class="card-body">
+                      <h5 class="card-title text-success text-center">FIFA 22</h5>
+                      <p class="card-text text-center">El juego top de Futbol mundial lo podes conseguir primero aqui.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-3 mb-3">
+                  <div class="card">
+                    <img src="/img/battlefield5jpg" class="card-img-top" alt="imagen del juego battlefield 5">
+                    <div class="card-body">
+                      <h5 class="card-title text-success text-center">Battlefield V</h5>
+                      <p class="card-text text-center">Videojuego de disparos y acción bélica en primera persona​.</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
             </section>
           </main>
     </main>
-    <footer class="bg-dark text-light py-2 fixed-bottom">
+    <footer class="bg-dark bg-gradient text-light py-2">
       <div class="container">
-        <!-- ======LINKEAR A PAGINA 404===== -->
         <div class="row">
-          <div
-            class="col-sm-12 col-md-3 col-lg-3 text-center d-flex align-items-center justify-content-center"
-          >
-            <div class="d-flex flex-column text-start">
-              <a class="text-white claseLinksFooter ms-3 my-1" href="#"
-                >Politicas de seguridad</a
-              >
-              <a class="text-white claseLinksFooter ms-3 my-1" href="#"
-                >Terminos y conciciones</a
-              >
-              <a class="text-white claseLinksFooter ms-3 my-1" href="#"
-                >Nuestro servidor de discord</a
-              >
+          <!-- ======LINKEAR A PAGINA 404===== -->
+          <div class="col-sm-12 col-md-3 col-lg-3 text-center d-flex align-items-center justify-content-center">
+            <div class="d-flex flex-column text-center">
+              <a class="text-white claseLinksFooter ms-3" href="#">Terminos y condiciones</a>
+              <a class="text-white claseLinksFooter ms-3" href="#">Politicas de seguridad</a>
+              <a class="text-white claseLinksFooter ms-3" href="#">Nuestro servidor de
+                discord</a>
             </div>
           </div>
-          <!-- ===========LINEA EN FOOTER============== -->
-          <div
-            class="col-sm-12 col-md-1 col-lg-1 d-flex align-items-center justify-content-center"
-          >
+          <div class="col-sm-12 col-md-1 col-lg-1 d-flex align-items-center justify-content-center">
             <div class="border border-white linea-footer  my-3"></div>
           </div>
           <div class="col-sm-12 col-md-3 col-lg-3 text-center">
-            <img
-              class="w-75 my-2"
-              src="/img/rollingGamerFondoNegro.jfif"
-              alt="Logo RolllingGamer"
-            />
+            <img class="my-1 rounded-circle w-25" src="img/logo_small_icon_red.png"
+              alt="Logo Rolling Games Alternativo" />
           </div>
-          <!-- ===========LINEA EN FOOTER============== -->
-          <div
-            class="col-sm-12 col-md-1 col-lg-1 d-flex align-items-center justify-content-center"
-          >
+          <div class="col-sm-12 col-md-1 col-lg-1 d-flex align-items-center justify-content-center">
             <div class="border border-white linea-footer  my-3"></div>
           </div>
-          <div
-            class="col-sm-12 col-md-3 col-lg-3 text-center d-flex align-items-center justify-content-center"
-          >
+          <!-- ======LINKEAR A PAGINA 404===== -->
+          <div class="col-sm-12 col-md-3 col-lg-3 text-center d-flex align-items-center justify-content-center">
             <div class="">
-              <!-- ======LINKEAR A PAGINA 404===== -->
               <h5 class="text-white">Siguenos en nuestras redes:</h5>
-              <a class="text-white" href="#"
-                ><i class="fab fa-facebook-square fa-2x mx-2"></i
-              ></a>
-              <a class="text-white" href="#"
-                ><i class="fab fa-twitter-square fa-2x mx-2"></i
-              ></a>
-              <a class="text-white" href="#"
-                ><i class="fab fa-instagram-square fa-2x mx-2"></i>
+              <a class="text-white" href="#"><i class="fab fa-facebook-square fa-2x mx-2"></i></a>
+              <a class="text-white" href="#"><i class="fab fa-twitter-square fa-2x mx-2"></i></a>
+              <a class="text-white" href="#"><i class="fab fa-instagram-square fa-2x mx-2"></i>
               </a>
             </div>
           </div>
@@ -104,7 +101,7 @@
       </div>
     </footer>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/admin.js"></script>
+    <script src="js/app.js"></script>
     <script src="https://kit.fontawesome.com/29ffcad116.js" crossorigin="anonymous"></script>
 </body>
 </html>
