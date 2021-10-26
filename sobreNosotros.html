@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Web sobre video juegos y pefisfericos" />
+  <meta name="keywords" content="juegos perisfericos gamers" />
+  <meta name="author" content="Maxi Córdoba" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <title>Sobre Nosotros</title>
+</head>
+
+<body>
+  <header>
+    <nav class="fixed navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <div class="logo me-2 logoresponsive"><img src="/img/rolling-logo.jpg" alt="logo-rollingamer"
+            class="w-100"></div>
+        <a class="navbar-brand" href="../index.html">RollinGamer</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-RollinGamer"
+          aria-controls="navbar-RollinGamer" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-RollinGamer">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="sobreNosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-1">
+              <a class="nav-link btn btn-outline-danger" href="login.html">Login</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link btn btn-outline-danger" data-bs-target="#modalSuscripcion"
+                data-bs-toggle="modal">Registrarse</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="bg-light text-center py-5">
+      <article class="container">
+        <h1 class="display-2">Acerca de nosotros</h1>
+        <p class="lead">
+          Somos un grupo de alumnos de RollingCode School, actualmente cursando la formación en Fullstack <br />
+          Nos gusta la tecnología y las ñoñadas. En cada clase no solo aprendemos a
+          programar sino que además somos instruidos en el uso de metodologías
+          para gestionar proyectos de forma ordenadas y
+          eficientes. <br />
+          En nuestro tiempo libre nos gusta probar nuevos videojuegos, por eso
+          decidimos crear este sitio sobre el mundo gamer.
+        </p>
+        <section class="container py-5" id="galeria">
+          <div class="row justify-content-md-center">
+            <div class="col-sm-12 col-md-4 col-lg-2 py-5">
+              <img src="img/AVATAR4.jpg" class="rounded-circle img-fluid" alt="avatar de Maximiliano Cordoba" />
+              <p class="lead">Maximiliano Córdoba</p>
+            </div>
+            
+            <div class="col-sm-12 col-md-4 col-lg-2 py-5">
+              <img src="img/AVATAR2.jpg" class="rounded-circle img-fluid"
+                alt="avatar de Maximiliano Gallardo" />
+              <p class="lead">Maximiliano Gallardo</p>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-2 py-5">
+              <img src="img/AVATAR6.jpg" class="rounded-circle img-fluid" alt="avatar de Facundo Moya" />
+              <p class="lead">Facundo Moya</p>
+            </div>
+            
+            <div class="col-sm-12 col-md-4 col-lg-2 py-5">
+              <img src="img/AVATAR5.jpg" class="rounded-circle img-fluid" alt="avatar de Pablo Dip" />
+              <p class="lead">Pablo Dip</p>
+            </div>
+          </div>
+        </section>
+        <!-- Modal de Suscripción -->
+        <div class="modal fade" id="modalSuscripcion" tabindex="-1" aria-labelledby="modalSuscripcionLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalSuscripcionLabel">Suscribete para recibir primero todas nuestras
+                  novedades!
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="nombreSuscripcion" class="form-label">Nombre <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nombreSuscripcion" required
+                      placeholder="Escribe tu nombre">
+                  </div>
+                  <div class="mb-3">
+                    <label for="emailSuscripcion" class="form-label">Correo electrónico <span
+                        class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="emailSuscripcion" aria-describedby="emailAclaracion"
+                      required placeholder="email@email.com">
+                    <div id="emailAclaracion" class="form-text">Nosotros nunca compartiremos tu información con nadie.
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <p>*Prometemos firmemente no llenarte de basura la bandeja de entrada.</p>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                <button type="submit" class="btn btn-primary">Confirmar suscripción</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  </main>
+  <!-- ===========COMIENZA FOOTER============== -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <!-- ======DIVIDIENDO FOOTER EN  COLUMNAS===== -->
+      <div class="row">
+        <div class="col-sm-12 col-md-3 col-lg-3 text-center d-flex align-items-center justify-content-center">
+          <div class="d-flex flex-column text-start">
+            <h5 class="mx-0 ">Blogs gamers amigos:</h5>
+            <a class="text-white claseLinksFooter ms-3 my-1" href="https://zonazerogame.com/Blog">Zona Zero Game</a>
+            <a class="text-white claseLinksFooter ms-3 my-1" href="https://www.molagames.com/blog-del-gamer/">Mola
+              Games</a>
+            <a class="text-white claseLinksFooter ms-3 my-1"
+              href="https://www.colombiagamer.com.co/blog-colombia-gamer">Colombia Gamers</a>
+          </div>
+        </div>
+        <!-- ===========LINEA EN FOOTER============== -->
+        <div class="col-sm-12 col-md-1 col-lg-1 d-flex align-items-center justify-content-center">
+          <div class="border border-secondary linea-footer my-3"></div>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-3  text-center">
+          <img class="w-75 my-2" src="/img/rollinGamerFondoRojo.jfif" alt="Logo RolllingGamer">
+        </div>
+        <!-- ===========LINEA EN FOOTER============== -->
+        <div class="col-sm-12 col-md-1 col-lg-1 d-flex align-items-center justify-content-center">
+          <div class="border border-secondary   linea-footer my-3"></div>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-3 text-center d-flex align-items-center justify-content-center ">
+          <div class="">
+            <!-- ======LINKEAR A PAGINA 404===== -->
+            <h5 class="">Siguenos en nuestras redes:</h5>
+            <a class="text-white" href="#"><i class="fab fa-facebook-square fa-2x mx-2 "></i></a>
+            <a class="text-white" href="#"><i class="fab fa-twitter-square fa-2x mx-2 "></i></a>
+            <a class="text-white" href="#"><i class="fab fa-instagram-square fa-2x mx-2 "></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ===========FIN FOOTER============== -->
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/29ffcad116.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
