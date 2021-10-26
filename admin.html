@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="shortcut icon" href="img/logo_small_icon_only.png" type="image/x-icon">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <title>Admin</title>
 </head>
 <body>
@@ -56,7 +57,7 @@
       <form class="bg-light shadow p-3 mx-5 mt-4" id="formPersona">
         <div class="mb-3">
           <label class="form-label">Nombre</label>
-          <input type="text" class="form-control" placeholder="Counter Strike 1.6" id="nombre" required />
+          <input type="text" class="form-control" placeholder="Call of Duty Modern Warfare II" id="nombre" required />
           <div class="invalid-feedback">Este campo es obligatorio</div>
           <div class="valid-feedback">Este campo es correcto</div>
         </div>
@@ -82,7 +83,7 @@
           <label class="form-label">URL</label>
           <input type="text" class="form-control" id="url" />
         </div>
-        <button type="submit" class="btn btn-warning border-dark  d-grid gap-2 d-md-block">Guardar</button>
+        <button type="submit" class="btn btn-primary border-dark  d-grid gap-2 d-md-block">Guardar</button>
         <div class="alert alert-danger d-none my-3" role="alert" id="alerta">
           El formulario no esta completo.
         </div>

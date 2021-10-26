@@ -47,14 +47,14 @@ function guardarPersona(e) {
       actualizarJuego();
     } else {
       console.log("aqui se crea un producto");
-      agregarPersona();
+      agregarJuego();
     }
   } else {
     console.log("aqui no se crea un producto");
   }
 }
 
-function agregarPersona() {
+function agregarJuego() {
   let juegoNuevo = new Juego(
     nombre.value,
     precio.value,
@@ -69,6 +69,11 @@ function agregarPersona() {
   limpiarFormulario();
 
   crearFila(juegoNuevo);
+  Swal.fire(
+    "Producto agregado",
+    "El producto fue agregado correctamente",
+    "success"
+  );
 }
 
 function cargaInicial() {
@@ -91,7 +96,7 @@ function crearFila(game) {
   <td>${game.url}</td>
   <td>
     <button class="btn btn-success" onclick="prepararEdicionJuego('${game.codigo}')">Editar</button> 
-    <button class="btn btn-danger">Borrar</button>
+    <button class="btn btn-danger" onclick="eliminarJuego('${game.codigo}')">Borrar</button>
   </td>
 </tr>`;
 }
@@ -125,23 +130,43 @@ window.prepararEdicionJuego = (cod) => {
 };
 
 function actualizarJuego() {
-  console.log("aqui modifico amigo");
-  let indiceJuego = listaJuegos.findIndex((game) => {
-    return game.codigo == codigo.value;
-  });
-  console.log(indiceJuego);
-  console.log(listaJuegos[indiceJuego]);
+  Swal.fire({
+    title: "¿Está seguro que desea editar el producto?",
+    text: "Una vez hechos los cambios, no se puede revertir",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Si, deseo hacerlo",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      console.log("aqui modifico amigo");
 
-  listaJuegos[indiceJuego].nombre = document.querySelector("#nombre").value;
-  listaJuegos[indiceJuego].descripcion =
-    document.querySelector("#descripcion").value;
-  listaJuegos[indiceJuego].precio = document.querySelector("#precio").value;
-  listaJuegos[indiceJuego].url = document.querySelector("#url").value;
+      let indiceJuego = listaJuegos.findIndex((game) => {
+        return game.codigo == codigo.value;
+      });
+      console.log(indiceJuego);
+      console.log(listaJuegos[indiceJuego]);
 
-  localStorage.setItem("listaJuegosKey", JSON.stringify(listaJuegos));
-  borrarFilas();
-  listaJuegos.forEach((game) => {
-    crearFila(game);
+      listaJuegos[indiceJuego].nombre = document.querySelector("#nombre").value;
+      listaJuegos[indiceJuego].descripcion =
+        document.querySelector("#descripcion").value;
+      listaJuegos[indiceJuego].precio = document.querySelector("#precio").value;
+      listaJuegos[indiceJuego].url = document.querySelector("#url").value;
+
+      localStorage.setItem("listaJuegosKey", JSON.stringify(listaJuegos));
+      borrarFilas();
+      listaJuegos.forEach((game) => {
+        crearFila(game);
+      });
+      limpiarFormulario();
+      Swal.fire(
+        "El producto ha sido editado",
+        "Se edito correctamente",
+        "success"
+      );
+    }
   });
 }
 
@@ -149,3 +174,40 @@ function borrarFilas() {
   let tabla = document.querySelector("#tablaJuegos");
   tabla.innerHTML = "";
 }
+
+window.eliminarJuego = (cod) => {
+  Swal.fire({
+    title: "¿Está seguro que desea borrar el elemento seleccionado?",
+    text: "El elemento se borrara por completo",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Si, deseo hacerlo",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      let _listaJuegos = listaJuegos.filter((game) => {
+        return game.codigo != cod;
+      });
+      console.log(_listaJuegos);
+      Swal.fire(
+        "El elemento se borro",
+        "Se elimino el elemento completamente",
+        "success"
+      );
+      listaJuegos = _listaJuegos;
+      localStorage.setItem("listaJuegosKey", JSON.stringify(listaJuegos));
+      borrarFilas();
+      listaJuegos.forEach((game) => {
+        crearFila(game);
+      });
+      limpiarFormulario();
+      Swal.fire(
+        "El producto ha sido eliminado",
+        "Se elimino correctamente",
+        "success"
+      );
+    }
+  });
+};
