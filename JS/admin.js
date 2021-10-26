@@ -8,7 +8,7 @@ import {
 
 import { Juego } from "./productClass.js";
 
-export let listaJuegos = [];
+let listaJuegos = [];
 
 let precio = document.querySelector("#precio");
 let codigo = document.querySelector("#codigo");
@@ -46,11 +46,11 @@ function guardarPersona(e) {
     if (juegoExistente == true) {
       actualizarJuego();
     } else {
-      console.log("aqui se crea un producto");
+     
       agregarJuego();
     }
   } else {
-    console.log("aqui no se crea un producto");
+
   }
 }
 
@@ -79,7 +79,6 @@ function agregarJuego() {
 function cargaInicial() {
   listaJuegos = JSON.parse(localStorage.getItem("listaJuegosKey")) || [];
 
-  console.log(listaJuegos);
 
   listaJuegos.forEach((game) => {
     crearFila(game);
@@ -141,17 +140,12 @@ function actualizarJuego() {
     cancelButtonText: "Cancelar",
   }).then((result) => {
     if (result.isConfirmed) {
-      console.log("aqui modifico amigo");
-
       let indiceJuego = listaJuegos.findIndex((game) => {
         return game.codigo == codigo.value;
       });
-      console.log(indiceJuego);
-      console.log(listaJuegos[indiceJuego]);
-
       listaJuegos[indiceJuego].nombre = document.querySelector("#nombre").value;
       listaJuegos[indiceJuego].descripcion =
-        document.querySelector("#descripcion").value;
+      document.querySelector("#descripcion").value;
       listaJuegos[indiceJuego].precio = document.querySelector("#precio").value;
       listaJuegos[indiceJuego].url = document.querySelector("#url").value;
 
@@ -190,7 +184,6 @@ window.eliminarJuego = (cod) => {
       let _listaJuegos = listaJuegos.filter((game) => {
         return game.codigo != cod;
       });
-      console.log(_listaJuegos);
       Swal.fire(
         "El elemento se borro",
         "Se elimino el elemento completamente",
