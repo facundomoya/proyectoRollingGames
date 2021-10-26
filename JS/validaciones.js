@@ -1,6 +1,5 @@
 export function validarCampo(input) {
   if (input.value.trim().length != 0 && input.value.trim().length >= 3) {
-    console.log("dato correcto");
     input.className = "is-valid form-control";
     return true;
   } else {
@@ -62,5 +61,4 @@ export function validarGeneral() {
     return false;
   }
 }
-
 
