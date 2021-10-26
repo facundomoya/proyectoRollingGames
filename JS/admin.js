@@ -8,7 +8,7 @@ import {
 
 import { Juego } from "./productClass.js";
 
-export let listaJuegos = [];
+let listaJuegos = [];
 
 let precio = document.querySelector("#precio");
 let codigo = document.querySelector("#codigo");

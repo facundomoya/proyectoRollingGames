@@ -10,6 +10,8 @@ export function validarCampo(input) {
   }
 }
 
+
+
 export function validarCodigo(input) {
   let patron = /^[0-9]{3}[-][A-Z]{3}$/;
   if (patron.test(input.value)) {
@@ -60,3 +62,5 @@ export function validarGeneral() {
     return false;
   }
 }
+
+
