@@ -13,10 +13,6 @@ body{
     min-height: 100vh;
 }
 
-footer{
-    padding: 1em 0;
-    margin-top: auto;
-}
 
 .logo{
     object-fit: cover;
@@ -29,12 +25,6 @@ footer{
     display: flex;
     justify-content: center;
 }
-}
-
-@media (max-width: 1024px) { 
-    .publicidad{
-        display: none;
-    }
 }
  
 .claseLinksFooter{
@@ -92,5 +82,96 @@ footer{
 
 .colorfondocards{
     background: lightgray;
+    min-height: 210px;
 }
 
+@media all and (max-width:360px){
+    footer{
+        margin: 0px 0px 43px 0px;
+    }
+    .logo-footer-responsive-2{
+        width: 20%;
+    }
+
+}
+
+@media all and (width:411px) and (height:731px){
+    footer{
+        margin: 0px 0px 130px 0px;
+    }
+    .logo-footer-responsive-2{
+        width: 20%;
+    }
+
+}
+
+@media all and (width:411px) and (height:823px){
+    footer{
+        margin: 0px 0px 226px 0px;
+    }
+    .logo-footer-responsive-2{
+        width: 20%;
+    }
+}
+
+@media all and (width:320px) and (height:568px){
+    footer{
+        margin: 0px 0px 0px 0px;
+    }
+    .logo-footer-responsive-2{
+        width: 20%;
+    }
+
+}
+
+@media all and (width:375px) and (height:667px){
+    footer{
+        margin: 0px 0px 70px 0px;
+    }
+    .logo-footer-responsive-2{
+        width: 20%;
+    }
+
+}
+
+
+@media all and (width:375px) and (height:812px){
+    footer{
+        margin: 0px 0px 215px 0px;
+    }
+    .logo-footer-responsive-2{
+        width: 20%;
+    }
+
+}
+
+
+@media all and (width:414px) and (height:736px){
+    footer{
+        margin: 0px 0px 139px 0px;
+    }
+    .logo-footer-responsive-2{
+        width: 20%;
+    }
+
+}
+
+@media all and (min-width:768px) and (height:1024px){
+    footer{
+        margin: 0px 0px 427px 0px;
+    }
+    .logo-footer-responsive-2{
+        width: 40%;
+    }
+
+}
+
+@media all and (min-width:1024px) and (height:1366px){
+    footer{
+        margin: 0px 0px 769px 0px;
+    }
+    .logo-footer-responsive-2{
+        width: 40%;
+    }
+
+}
