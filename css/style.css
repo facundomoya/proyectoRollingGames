@@ -1,5 +1,10 @@
 *{
     font-family: 'Roboto', sans-serif;
+    color: #e6e6e6;
+}
+
+main {
+    background: #121212;
 }
 
 body{
