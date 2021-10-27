@@ -1,6 +1,5 @@
 export function validarCampo(input) {
   if (input.value.trim().length != 0 && input.value.trim().length >= 3) {
-    console.log("dato correcto");
     input.className = "is-valid form-control";
     return true;
   } else {
@@ -9,6 +8,8 @@ export function validarCampo(input) {
     return false;
   }
 }
+
+
 
 export function validarCodigo(input) {
   let patron = /^[0-9]{3}[-][A-Z]{3}$/;
@@ -60,3 +61,4 @@ export function validarGeneral() {
     return false;
   }
 }
+
