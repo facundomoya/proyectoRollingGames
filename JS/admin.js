@@ -204,3 +204,20 @@ window.eliminarJuego = (cod) => {
     }
   });
 };
+
+export function encontrarCodigo(cod,bool){
+  let valor;
+    valor=listaJuegos.findIndex((indicador)=>{
+     if(codigo.value==indicador.codigo){
+    
+         return true
+     }else{
+       return false
+     }
+    })
+    if(valor==-1){
+      return false;
+    }else{
+      return true
+    }
+    }
