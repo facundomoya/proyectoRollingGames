@@ -18,7 +18,7 @@ footer{
     width: 10%;
 }
 
-@media (max-width: 768px) {
+@media all and (max-width: 768px) {
 .logoresponsive{
     width: 30%;
     display: flex;
@@ -41,7 +41,7 @@ footer{
     height: 50%;
 }
    
-@media (max-width: 768px) { 
+@media all and (max-width: 768px) { 
     .linea-footer{
         width: 75%;
         height: 1px;
@@ -51,4 +51,20 @@ footer{
 .disabled{
     pointer-events: none;
     cursor: default;
+}
+
+.logo-footer{
+    width: 27%;
+}
+
+@media all and (max-width: 768px) and (min-width: 0px) {
+    .logo-footer-responsive{
+        width: 13%;
+    }
+}
+
+@media all and (max-width: 991px) and (min-width: 769px) {
+    .logo-footer-responsive-2{
+        width: 38%;
+    }
 }
