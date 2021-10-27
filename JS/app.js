@@ -16,10 +16,10 @@ function crearColumna(producto) {
   grilla.innerHTML += `<div class="col-sm-12 col-md-4 col-lg-3 mb-3">
     <div class="card">
       <img src="${producto.url}" class="card-img-top" alt="${producto.nombre}">
-      <div class="card-body">
-        <h5 class="card-title text-success text-center">${producto.nombre}</h5>
-        <p class="card-text text-center">${producto.descripcion}</p>
-        <p class="card-text text-center">${producto.precio}<strong> USD</strong></p>
+      <div class="card-body colorfondocards">
+        <h5 class="card-title text-danger text-center">${producto.nombre}</h5>
+        <p class="card-text text-center text-dark">${producto.descripcion}</p>
+        <p class="card-text text-center text-dark">${producto.precio}<strong class="text-dark"> USD</strong></p>
       </div>
     </div>
   </div>`;
