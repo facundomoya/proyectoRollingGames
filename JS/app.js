@@ -17,7 +17,8 @@ function crearColumna(producto) {
     <div class="card">
       <img src="${producto.url}" class="card-img-top" alt="${producto.nombre}">
       <div class="card-body colorfondocards">
-        <h5 class="card-title text-danger text-center">${producto.nombre}</h5>
+        <h5 class="card-title text-center"><b class="text-dark">${producto.nombre}</b></h5>
+        <hr class="text-dark">
         <p class="card-text text-center text-dark">${producto.descripcion}</p>
         <p class="card-text text-center text-dark">${producto.precio}<strong class="text-dark"> USD</strong></p>
       </div>
