@@ -73,3 +73,19 @@ footer{
         width: 38%;
     }
 }
+
+.img-404 {
+    width: 52%;   
+}
+
+@media all and (max-width: 768px) and (min-width: 0px) {
+    .img-404-responsive{
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 991px) and (min-width: 769px) {
+    .img-404-responsive-2{
+        width: 65%;
+    }
+}
