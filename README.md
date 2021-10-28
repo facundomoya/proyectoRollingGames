@@ -4,6 +4,7 @@ Este proyecto es un catálogo de videojuegos creado con javascript, se puede hac
 
 ## DEMO
 
+[Link del repo](https://rollingamesg3.netlify.app/)
 ## Librerias externas
 
 [SweetAlert](https://sweetalert2.github.io/)
@@ -18,4 +19,3 @@ Este proyecto es un catálogo de videojuegos creado con javascript, se puede hac
 - Dip Pablo
 - Gallardo Maximiliano
 - Moya Facundo
-

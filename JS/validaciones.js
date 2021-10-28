@@ -9,14 +9,9 @@ export function validarCampo(input) {
   }
 }
 
-import{encontrarCodigo} from "./admin.js"
-
 export function validarCodigo(input) {
-  let bool = false
-  let bool2=encontrarCodigo(codigo.value,bool)
-  console.log(bool2)
   let patron = /^[0-9]{3}[-][A-Z]{3}$/;
-  if (patron.test(input.value) && bool2==false) {
+  if (patron.test(input.value)) {
     input.className = "is-valid form-control";
     return true;
   } else {
